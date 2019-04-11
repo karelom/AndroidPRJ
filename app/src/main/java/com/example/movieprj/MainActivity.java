@@ -6,7 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+
+import com.example.movieprj.listview.movieListActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             String name = editName.getText().toString(); //gets you the contents of edit text
 
             Intent i = new Intent();
-            i.setClass(MainActivity.this, SecondActivity.class); //pass value from main to second
+            i.setClass(MainActivity.this, movieListActivity.class); //pass value from main to second
             i.putExtra("name", name);
             startActivity(i); //to secondAct.
             //finish(); //end MainAct.
