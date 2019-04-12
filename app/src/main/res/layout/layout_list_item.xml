@@ -3,18 +3,19 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:background="@color/colorWhite">
 
     <ImageView
         android:id="@+id/iv"
         android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_height="150dp"
         android:background="#000"
         android:scaleType="centerCrop"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="150dp"
         android:orientation="vertical"
         android:paddingLeft="10dp">
 
@@ -23,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Movie Name"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:textColor="#000000"/>
 
         <TextView
@@ -32,17 +33,19 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:text="Movie Onscreen Time"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:textColor="#000000"/>
 
         <TextView
             android:id="@+id/tv_movieDescription"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginTop="5dp"
             android:text="Movie Description"
-            android:textSize="20sp"
-            android:textColor="#000000"/>
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:maxLines="3"
+            android:ellipsize="end"/>
 
     </LinearLayout>
 

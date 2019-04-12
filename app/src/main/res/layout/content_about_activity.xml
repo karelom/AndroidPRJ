@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="25dp"
+    android:background="#000000">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:text="Nice to meet you"
+    android:drawablePadding="4dp"
+    android:layout_marginBottom="10dp"
+    android:textColor="@color/colorWhite"
+    android:textSize="20sp"
+    android:drawableLeft="@drawable/svg_ic_smile"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="This is our first Andrroid Application, we hope you will like it! We will keep on working!"
+        android:textSize="15sp"
+        android:textColor="@color/colorWhite"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="4dp"
+        android:gravity="center"
+        android:text="Contect with me"
+        android:textSize="20sp"
+        android:layout_marginBottom="10dp"
+        android:drawableLeft="@drawable/svg_ic_contact"
+        android:textColor="@color/colorWhite"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="wenting.han@efrei.net ; juiyang.hsu@efrei.net"
+        android:textSize="15sp"
+        android:textColor="@color/colorWhite"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="4dp"
+        android:gravity="center"
+        android:text="Thanks"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        android:layout_marginBottom="10dp"
+        android:drawableLeft="@drawable/svg_ic_flower"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="My teacher"
+        android:textSize="15sp"
+        android:textColor="@color/colorWhite"/>
+
+</LinearLayout>

@@ -8,17 +8,19 @@
         android:id="@+id/relativeLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="10dp">
+        android:padding="1dp"
+        android:background="#000000">
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="153dp"
-            android:layout_height="46dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            android:text="Hello!"
-            android:textSize="24sp" />
+            android:text="Top Movies!💗"
+            android:textSize="24sp"
+            android:textColor="@color/colorWhite"/>
 
         <ListView
             android:id="@+id/listView"
@@ -26,6 +28,7 @@
             android:layout_height="match_parent"
             android:layout_marginTop="20dp"
             android:layout_below="@id/textView"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"
+            android:listSelector="@drawable/list_item"/>
     </RelativeLayout>
 </LinearLayout>

@@ -11,6 +11,8 @@ import com.example.movieprj.listview.movieListActivity;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Button btnAbout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +20,15 @@ public class MainActivity extends AppCompatActivity {
 
         Button login = (Button)findViewById(R.id.button);
         login.setOnClickListener(loginClick);
+
+        btnAbout = findViewById(R.id.btn_about);
+        btnAbout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,AboutActivity.class);
+                startActivity(intent);
+            }
+        });
     }// initial value when app starts
 
     private Button.OnClickListener loginClick = new Button.OnClickListener() {
