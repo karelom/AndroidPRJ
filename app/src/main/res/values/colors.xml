@@ -5,4 +5,13 @@
     <color name="colorAccent">#d81b1b</color>
     <color name="colorClick">#f2edbf</color>
     <color name="colorWhite">#ffffff</color>
+    <color name="grey">#7A7A7A</color>
+    <color name="background">#0044AA</color>
+    <color name="bluelight">#449DEF</color>
+    <color name="bluedark">#2F6699</color>
+    <color name="greenlight">#70C656</color>
+    <color name="greendark">#53933F</color>
+    <color name="orangelight">#F3AE1B</color>
+    <color name="orangedark">#BB6008</color>
+    <color name="black">#000000</color>
 </resources>
