@@ -59,7 +59,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:text="My teacher"
+        android:text="Jean-Francois Lalande"
+        android:textSize="15sp"
+        android:textColor="@color/colorWhite"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="4dp"
+        android:gravity="center"
+        android:text="GitHub"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        android:layout_marginBottom="10dp"
+        android:drawableLeft="@drawable/svg_ic_github"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="https://github.com/mobiledevefrei2019/moviePRJ"
         android:textSize="15sp"
         android:textColor="@color/colorWhite"/>
 

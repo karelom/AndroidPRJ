@@ -15,6 +15,8 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.movieprj.DetailActivity;
+import com.example.movieprj.MainActivity;
 import com.example.movieprj.R;
 
 import org.json.JSONArray;
@@ -42,10 +44,10 @@ public class movieListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_list);
         // get intent from main activity
-        Intent i = getIntent();
-        String s = "Welcome! "+i.getStringExtra("name");
-        TextView show = (TextView) findViewById(R.id.textView);
-        show.setText(s);
+//        Intent i = getIntent();
+//        String s = "Welcome! "+i.getStringExtra("name");
+//        TextView show = (TextView) findViewById(R.id.textView);
+//        show.setText(s);
 
         movieList = findViewById(R.id.listView);
 //        movieList.setAdapter(new MyListAdapter(movieListActivity.this));
@@ -56,8 +58,11 @@ public class movieListActivity extends AppCompatActivity {
         movieList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(movieListActivity.this,"pos on :"+position,Toast.LENGTH_SHORT).show();
+                Toast.makeText(movieListActivity.this,"movie id is :"+arrayList.get(position).get("movie_id"),Toast.LENGTH_SHORT).show();
 
+                Intent intent = new Intent(movieListActivity.this, DetailActivity.class);
+                intent.putExtra("movie_id",arrayList.get(position).get("movie_id"));
+                startActivity(intent);
             }
         });
 
@@ -100,7 +105,7 @@ public class movieListActivity extends AppCompatActivity {
                 }
 
                 resultJson = buffer.toString();
-                Log.d("FOR_LOG", resultJson);
+//                Log.d("FOR_LOG", resultJson);
 
             } catch (Exception e) {
                 e.printStackTrace();
@@ -129,14 +134,16 @@ public class movieListActivity extends AppCompatActivity {
                     String movieName = friend.getString("title");
                     String onScreenTime = friend.getString("release_date");
                     String movieDescription =friend.getString("overview");
+                    String movieid = friend.getString("id");
                     String moviePoster = "https://image.tmdb.org/t/p/w400"+friend.getString("poster_path");
-                    Log.d("FOR_LOG", moviePoster);
+//                    Log.d("FOR_LOG", moviePoster);
 
                     hashmap = new HashMap<String, String>();
                     hashmap.put("tv_movieName", "" + movieName);
                     hashmap.put("tv_movieOnscreenTime", "" + onScreenTime);
                     hashmap.put("tv_movieDescription", "" + movieDescription);
                     hashmap.put("iv", "" + moviePoster);
+                    hashmap.put("movie_id", "" + movieid);
                     arrayList.add(hashmap);
                 }
 
